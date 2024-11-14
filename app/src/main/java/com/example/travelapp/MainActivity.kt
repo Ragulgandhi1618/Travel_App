@@ -33,14 +33,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-
     @Composable
     fun TravelApp(context: Context) {
         Column(
             modifier = Modifier
                 .padding(20.dp)
                 .verticalScroll(rememberScrollState())
-
         ) {
 
             Text(
@@ -52,140 +50,113 @@ class MainActivity : ComponentActivity() {
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            // 01
+            // 01 - Bali
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(250.dp)
                     .clickable {
-                    context.startActivity(
-                        Intent(context, BaliActivity::class.java)
-
-                    )
+                        context.startActivity(Intent(context, BaliActivity::class.java))
                     },
                 elevation = 8.dp
-            )
-            {
+            ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Image(
-                        painterResource(id = R.drawable.bali), contentDescription = "",
+                        painterResource(id = R.drawable.bali),
+                        contentDescription = "",
                         modifier = Modifier
                             .height(150.dp)
                             .scale(scaleX = 1.2F, scaleY = 1F)
                     )
-
-                    Text(
-                        text = stringResource(id = R.string.place_1),
-                        fontSize = 18.sp
-                    )
-
-
-                    Text(
-                        text = stringResource(id = R.string.description),
-                        fontWeight = FontWeight.Light,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
-
-                    Text(
-                        text = stringResource(id = R.string.plan), color = Color.Gray,
-                        fontSize = 16.sp
-                    )
+                    Text(text = stringResource(id = R.string.place_1), fontSize = 18.sp)
+                    Text(text = stringResource(id = R.string.description), fontWeight = FontWeight.Light, fontSize = 16.sp, textAlign = TextAlign.Center)
+                    Text(text = stringResource(id = R.string.plan), color = Color.Gray, fontSize = 16.sp)
                 }
             }
 
             Spacer(modifier = Modifier.height(20.dp))
 
-
-            //02
+            // 02 - Paris
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(250.dp)
                     .clickable {
-                    context.startActivity(
-                        Intent(context, ParisActivity::class.java)
-
-                    )
+                        context.startActivity(Intent(context, ParisActivity::class.java))
                     },
                 elevation = 8.dp
-            )
-            {
+            ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Image(
-                        painterResource(id = R.drawable.paris), contentDescription = "",
+                        painterResource(id = R.drawable.paris),
+                        contentDescription = "",
                         modifier = Modifier
                             .height(150.dp)
                             .scale(scaleX = 1.2F, scaleY = 1F)
                     )
-
-                    Text(
-                        text = stringResource(id = R.string.place_2),
-                        fontSize = 18.sp
-                    )
-
-
-                    Text(
-                        text = stringResource(id = R.string.description),
-                        fontWeight = FontWeight.Light,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
-
-                    Text(
-                        text = stringResource(id = R.string.plan), color = Color.Gray,
-                        fontSize = 16.sp
-                    )
+                    Text(text = stringResource(id = R.string.place_2), fontSize = 18.sp)
+                    Text(text = stringResource(id = R.string.description), fontWeight = FontWeight.Light, fontSize = 16.sp, textAlign = TextAlign.Center)
+                    Text(text = stringResource(id = R.string.plan), color = Color.Gray, fontSize = 16.sp)
                 }
             }
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            //03
+            // 03 - Singapore
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(250.dp)
                     .clickable {
-                    context.startActivity(
-                        Intent(context, SingaporeActivity::class.java)
-
-                    )
+                        context.startActivity(Intent(context, SingaporeActivity::class.java))
                     },
                 elevation = 8.dp
-            )
-            {
+            ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Image(
-                        painterResource(id = R.drawable.singapore), contentDescription = "",
+                        painterResource(id = R.drawable.singapore),
+                        contentDescription = "",
                         modifier = Modifier
                             .height(150.dp)
                             .scale(scaleX = 1.2F, scaleY = 1F)
                     )
+                    Text(text = stringResource(id = R.string.place_3), fontSize = 18.sp)
+                    Text(text = stringResource(id = R.string.description), fontWeight = FontWeight.Light, fontSize = 16.sp, textAlign = TextAlign.Center)
+                    Text(text = stringResource(id = R.string.plan), color = Color.Gray, fontSize = 16.sp)
+                }
+            }
 
-                    Text(
-                        text = stringResource(id = R.string.place_3),
-                        fontSize = 18.sp
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // 04 - Kodaikanal (New Card)
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(250.dp)
+                    .clickable {
+                        context.startActivity(Intent(context, KodaikanalActivity::class.java))
+                    },
+                elevation = 8.dp
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        painterResource(id = R.drawable.kodaikanal), // Add Kodaikanal image resource here
+                        contentDescription = "kodaikanal /n super saving pack at $5000",
+                        modifier = Modifier
+                            .height(150.dp)
+                            .scale(scaleX = 1.2F, scaleY = 1F)
                     )
-
-
-                    Text(
-                        text = stringResource(id = R.string.description),
-                        fontWeight = FontWeight.Light,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
-
-                    Text(
-                        text = stringResource(id = R.string.plan), color = Color.Gray,
-                        fontSize = 16.sp
-                    )
+                    Text(text = stringResource(id = R.string.place_4), fontSize = 18.sp)
+                    Text(text = stringResource(id = R.string.description), fontWeight = FontWeight.Light, fontSize = 16.sp, textAlign = TextAlign.Center)
+                    Text(text = stringResource(id = R.string.plan), color = Color.Gray, fontSize = 16.sp)
                 }
             }
 
@@ -193,5 +164,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-
